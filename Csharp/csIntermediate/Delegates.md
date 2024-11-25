@@ -103,3 +103,20 @@ In order to get rid of all the first steps, we can directly use Func, Action, or
 - The Func delegate takes zero, one or more input parameters, and returns a value (with its out parameter).
 - The action takes zero, one or more input parameters, but does not return anything.
 - Predicate is a special kind of Func. It represents a method that contains a set of criteria mostly defined inside an if condition and checks whether the passed parameter meets those criteria or not.
+- 
+## Use cases
+1. Event Handling
+2. Callback Methods
+3. Encapsulation of Methods
+4. LINQ and Functional Programming
+5. Dynamic Behavior at Runtime
+6. Multicasting
+7. Custom Implementations of Patterns
+   -  Observer pattern (This is how events work in C#)
+   -  Strategy pattern
+   -  Command pattern
+   -  Template Method pattern
+   -  Decorator pattern
+   -  Factory Method pattern
+   -  Chain of Responsibility pattern
+   -  ...

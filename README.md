@@ -11,5 +11,8 @@
 1. [Generics](/Csharp/csIntermediate/Generics.md)
 2. [Delegates](/Csharp/csIntermediate/Delegates.md)
 3. [Events](/Csharp/csIntermediate/Events.md)
+4. [Expression Bodies](/Csharp/csIntermediate/Expression_Bodies.md)
+5. [Lambda](/Csharp/csIntermediate/Lambda.md)
+6. [Anonymous Methods](/Csharp/csIntermediate/Anonymous_Methods.md)
 
 ## 3. Advanced

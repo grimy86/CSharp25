@@ -62,6 +62,26 @@ class Program
 }
 ```
 
+### Another simplified example
+```cs
+public class Subject
+{
+    public delegate void Notify();
+    public event Notify Observers;
+
+    public void ChangeState()
+    {
+        Console.WriteLine("State changed!");
+        Observers?.Invoke(); // Notify all observers
+    }
+}
+
+public class Observer
+{
+    public void OnStateChange() => Console.WriteLine("Observer notified!");
+}
+```
+
 ## Built-in EventHandler Delegate
 .NET Framework includes built-in delegate types `EventHandler` and `EventHandler<TEventArgs>` for the most common events. Typically, any event should include two parameters: the source of the event and event data. Use the EventHandler delegate for all events that do not include event data. 
 
