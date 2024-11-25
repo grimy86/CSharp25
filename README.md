@@ -1,4 +1,4 @@
-# Csharp Intermediate to Advanced
+# Csharp Intermediate to Expert
 
 ## 1. Core
 1. [Preprocessor Directives](/Csharp/csCore/Preprocessor_Directives.md)
@@ -25,3 +25,7 @@
 5. [Dependency Injection](/Csharp/csAdvanced/Dependency_Injection.md)
 6. [Memory Management](/Csharp/csAdvanced/Memory_Management.md)
 7. [Pattern Matching](/Csharp/csAdvanced/Pattern_Matching.md)
+
+## 4. Expert
+1. [Design Patterns](/Csharp/csExpert/Design_Patterns.md)
+2. [Shallow Copying](/Csharp/csExpert/Shallow_Copying.md)
