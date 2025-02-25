@@ -18,13 +18,14 @@
 8. [References](/Csharp/csIntermediate/References.md)
 
 ## 3. Advanced
-1. [Attributes & Reflection](/Csharp/csAdvanced/Attributes_Reflection.md)
-2. [Indexers](/Csharp/csAdvanced/Indexers.md)
-3. [Unsafe](/Csharp/csAdvanced/Unsafe.md)
-4. [Nullable References](/Csharp/csAdvanced/Nullable_References.md)
-5. [Dependency Injection](/Csharp/csAdvanced/Dependency_Injection.md)
-6. [Memory Management](/Csharp/csAdvanced/Memory_Management.md)
-7. [Pattern Matching](/Csharp/csAdvanced/Pattern_Matching.md)
+1. [Multithreading & Async programming](/Csharp/csAdvanced/Multithread_Async.md)
+2. [Attributes & Reflection](/Csharp/csAdvanced/Attributes_Reflection.md)
+3. [Indexers](/Csharp/csAdvanced/Indexers.md)
+4. [Unsafe](/Csharp/csAdvanced/Unsafe.md)
+5. [Nullable References](/Csharp/csAdvanced/Nullable_References.md)
+6. [Dependency Injection](/Csharp/csAdvanced/Dependency_Injection.md)
+7. [Memory Management](/Csharp/csAdvanced/Memory_Management.md)
+8. [Pattern Matching](/Csharp/csAdvanced/Pattern_Matching.md)
 
 ## 4. Expert
 1. [Design Patterns](/Csharp/csExpert/Design_Patterns.md)
