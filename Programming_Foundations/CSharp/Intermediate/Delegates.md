@@ -29,7 +29,7 @@ del.Invoke("Hello World!");
 // or 
 del("Hello World!");
 ```
-![delegates](delegates.png)
+![delegates](/Programming_Foundations/CSharp/Images/Delegates.png)
 
 # Passing delegates
 ```cs

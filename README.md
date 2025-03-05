@@ -16,28 +16,32 @@
 
 </details>
 
-<!--
 <details>
 <summary> Intermediate: More OOP & Functional concepts </summary>
 
-1. [OOP principles]()
-2. [Reference vs value types]()
-3. [Delegates & Events]()
-4. [Lambda expressions]()
-5. [Generics]()
-6. [Expression-bodied members]()
-7. [Overloading vs overriding]()
-8. [Observer pattern]()
+1. [Nullable value types](/Programming_Foundations/CSharp/Intermediate/Nullable_Types.md)
+2. [Generics](/Programming_Foundations/CSharp/Intermediate/Generics.md)
+3. [Partial Classes & Partial Methods](/Programming_Foundations/CSharp/Intermediate/Partials.md)
+4. [Tuples / ValueTuples](/Programming_Foundations/CSharp/Intermediate/Tuples.md)
+5. [Extension Methods](/Programming_Foundations/CSharp/Intermediate/Extensions.md)
+6. [Indexers](/Programming_Foundations/CSharp/Intermediate/Indexers.md)
+7. [Delegates](/Programming_Foundations/CSharp/Intermediate/Delegates.md)
+8. [Events](/Programming_Foundations/CSharp/Intermediate/Events.md)
+9. [Anonymous methods](/Programming_Foundations/CSharp/Intermediate/Anonymous_Methods.md)
+10. [Lambda expressions](/Programming_Foundations/CSharp/Intermediate/Lambda.md)
+11. [Expression-bodied members](/Programming_Foundations/CSharp/Intermediate/Expression_Bodies.md)
+12. [LINQ]()
 
 </details>
 
+<!--
 <details>
 <summary> Proficient: Advanced Concepts & Performance Optimization </summary>
 
 1. [IDisposable objects]()
 2. [Multi-threading / Async programming]()
 3. [Reflection & Attributes]()
-4. [Indexers & Operator overloading]()
+4. [Operator overloading](/Programming_Foundations/CSharp/Proficient/Operator_Overloading.md)
 5. [Dependency injection]()
 6. [Pattern matching]()
 7. [Nullable reference types]()

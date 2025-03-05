@@ -46,8 +46,6 @@ Func<int, int> multiply = num => num * 3;
 | Suitable for                 | Short, single-line logic             | Complex logic requiring multiple lines   |
 | Readability                  | High for simple computations         | Better for structured, complex behavior  |
 
----
-
 ### **Best Practices**
 - **Use expression lambdas** for concise, straightforward logic.
 - **Switch to statement lambdas** when dealing with more complex operations to improve readability and maintainability.
