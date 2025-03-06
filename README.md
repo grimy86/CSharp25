@@ -19,53 +19,42 @@
 <details>
 <summary> Intermediate: More OOP & Functional concepts </summary>
 
-1. [Nullable value types](/Programming_Foundations/CSharp/Intermediate/Nullable_Types.md)
-2. [Generics](/Programming_Foundations/CSharp/Intermediate/Generics.md)
-3. [Partial Classes & Partial Methods](/Programming_Foundations/CSharp/Intermediate/Partials.md)
-4. [Tuples / ValueTuples](/Programming_Foundations/CSharp/Intermediate/Tuples.md)
-5. [Extension Methods](/Programming_Foundations/CSharp/Intermediate/Extensions.md)
-6. [Indexers](/Programming_Foundations/CSharp/Intermediate/Indexers.md)
-7. [Delegates](/Programming_Foundations/CSharp/Intermediate/Delegates.md)
-8. [Events](/Programming_Foundations/CSharp/Intermediate/Events.md)
-9. [Anonymous methods](/Programming_Foundations/CSharp/Intermediate/Anonymous_Methods.md)
-10. [Lambda expressions](/Programming_Foundations/CSharp/Intermediate/Lambda.md)
-11. [Expression-bodied members](/Programming_Foundations/CSharp/Intermediate/Expression_Bodies.md)
-12. [LINQ]()
+1. [Operator overloading](/Programming_Foundations/CSharp/Intermediate/Operator_Overloading.md)
+2. [Nullable value types](/Programming_Foundations/CSharp/Intermediate/Nullable_Types.md)
+3. [Pass by reference](/Programming_Foundations/CSharp/Intermediate/Ref.md)
+4. [Generics](/Programming_Foundations/CSharp/Intermediate/Generics.md)
+5. [Partial Classes & Partial Methods](/Programming_Foundations/CSharp/Intermediate/Partials.md)
+6. [Tuples / ValueTuples](/Programming_Foundations/CSharp/Intermediate/Tuples.md)
+7. [Extension Methods](/Programming_Foundations/CSharp/Intermediate/Extensions.md)
+8. [Indexers](/Programming_Foundations/CSharp/Intermediate/Indexers.md)
+9. [Lambda expressions (Anonymous Functions)](/Programming_Foundations/CSharp/Intermediate/Lambda.md)
+10. [Delegates, Anonymous Methods, etc.](/Programming_Foundations/CSharp/Intermediate/Delegates.md)
+11. [Events](/Programming_Foundations/CSharp/Intermediate/Events.md)
+12. [Expression bodies](/Programming_Foundations/CSharp/Intermediate/Expression_Bodies.md)
+13. [Method hiding](/Programming_Foundations/CSharp/Intermediate/Method_hiding.md)
 
 </details>
 
-<!--
 <details>
 <summary> Proficient: Advanced Concepts & Performance Optimization </summary>
 
-1. [IDisposable objects]()
-2. [Multi-threading / Async programming]()
-3. [Reflection & Attributes]()
-4. [Operator overloading](/Programming_Foundations/CSharp/Proficient/Operator_Overloading.md)
-5. [Dependency injection]()
-6. [Pattern matching]()
-7. [Nullable reference types]()
-8. [Unsafe Code & Pointers ]()
+1. [LINQ](/Programming_Foundations/CSharp/Proficient/LINQ.md)
+2. [IDisposable objects](/Programming_Foundations/CSharp/Proficient/IDisposable.md)
+   - [IDisposable code sample](/Programming_Foundations/CSharp/Proficient/IDisposable.cs)
+3. [Multi-threading / Async programming](Programming_Foundations/CSharp/Proficient/Multithread_Async.md)
+4. [Attributes & Reflection](/Programming_Foundations/CSharp/Proficient/Attributes_Reflection.md)
+5. [Events](Programming_Foundations\CSharp\Proficient\Events.md)
 
 </details>
 
 <details>
-<summary> Expert: Design, Architecture, and Best Practices </summary>
+<summary> Expert: Design, architecture and lower-level concepts </summary>
 
-1. [IDisposable objects]()
-2. [Multi-threading / Async programming]()
-3. [Reflection & Attributes]()
-4. [Indexers & Operator overloading]()
-5. [Dependency injection]()
-6. [Pattern matching]()
-7. [Nullable reference types]()
-8. [Unsafe Code & Pointers ]()
+1. [Dependency injection]()
+2. [Pattern matching]()
+3. [Unsafe Code & Pointers ]()
+4.  [Class Relations: Association and Composition](https://www.tutorialsteacher.com/csharp/association-and-composition)
+5.  [SOLID Principles](https://www.tutorialsteacher.com/csharp/solid-principles)
+6.  [Design Patterns](https://www.tutorialsteacher.com/csharp/design-patterns)
 
 </details>
-
-<details> 
-<summary> References </summary> 
-
-
-</details>
--->

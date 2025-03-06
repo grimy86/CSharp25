@@ -1,131 +1,82 @@
-# Mulithreading
-Include `using System.Threading;` at the top of the file.
+# Mulithreading / Asynchronous programming
+Normally, C# runs code `line by line` (synchronously). `Multithreading` allows `multiple operations to run at the same time`, improving performance. Think of it like multitasking.
 
-Essentially there's 2 ways to create a multi-threaded process.
-1. First is by the example shown below
-2. Second is to do the exact same but use the `Task` class
+**Understanding Multithreading vs. Async:**
+When you run a program.exe, Windows creates a process. A process contains everything needed to run the program. The actual code execution happens inside threads.
 
-Note however that when you're using Tasks, mixing thread-objects within task-objects like: `Thread.Sleep(500);` could cause several issues.
+`Multithreading`: Uses multiple threads to perform tasks at the same time.
+`Asynchronous Programming`: A single thread handles multiple tasks by switching between them instead of waiting.
 
+**Two Ways to Run Code Concurrently:**
+- Using `Threads (System.Threading)`
+- Using `Tasks (System.Threading.Tasks)` (preferred for modern async code)
+
+## Creating a Thread using `System.Threading`
+Each method runs in a separate thread so they execute simultaneously.
 
 ```cs
-class Source
+using System;
+using System.Threading;
+
+class Program
 {
     public static void Main()
     {
-        Thread mainThread = Thread.CurrentThread;
-        mainThread.Name = "___MAIN__THREAD__";
-        //Console.WriteLine(mainThread.Name);
+        
+        Thread mainThread = Thread.CurrentThread; // Getting the current thread
+        mainThread.Name = "___MAIN__THREAD__"; // Changing a thread's name
+
         Thread thread1 = new Thread(CountDown);
         Thread thread2 = new Thread(CountUp);
+
+        thread1.Start(); // Start the first thread
+        thread2.Start(); // Start the second thread
         Console.WriteLine(mainThread.Name + " is complete!");
     }
+
     public static void CountDown()
     {
         for (int i = 10; i >= 0; i--)
-        {
-            Console.WriteLine("Timer #1 : " + i + " seconds");
-        }
-        Console.WriteLine("Timer #1 is complete!");
+            Console.WriteLine($"Counting Down: {i}");
     }
+
     public static void CountUp()
     {
         for (int i = 0; i <= 10; i++)
-        {
-            Console.WriteLine("Timer #2 : " + i + " seconds");
-        }
-        Console.WriteLine("Timer #2 is complete!");
+            Console.WriteLine($"Counting Up: {i}");
     }
 }
 ```
 
-# Async
-Here we have an example of a console app making "tea".
-
-## Sync programming
-1. Started the kettle.
-2. Waiting for the kettle.
-3. The kettle finished boiling.
-4. Taking the cups out.
-5. Putting teabags into the cups.
-6. Pouring hot water in the cups.
+## Async using `System.Threading.Tasks`
+ Using Task is preferred over Thread in modern C#. Task is a modern alternative to threads, it's more efficient and works well with async programming.
 
 ```cs
-    class Source
-    {
-        public static void Main()
-        {
-            MakeTea();
-        }
+using System;
+using System.Threading.Tasks;
 
-        public static void MakeTea()
-        {
-            string water = BoilWater();
-
-            Console.WriteLine("Taking the cups out.");
-            Console.WriteLine("Putting teabags into the cups.");
-
-            Console.WriteLine($"Pouring {water} in cups.");
-        }
-
-        public static string BoilWater()
-        {
-            Console.WriteLine("Started the kettle.");
-            Console.WriteLine("Waiting for the kettle.");
-            Task.Delay(2000).GetAwaiter().GetResult();
-            Console.WriteLine("The kettle finished boiling.");
-
-            return "hot water";
-        }
-    }
-```
-
-## Async programming
-1. Started the kettle.
-2. Waiting for the kettle.
-3. Taking the cups out.
-4. Putting teabags into the cups.
-5. The kettle finished boiling.
-6. Pouring hot water in the cups.
-
-```cs
-class Source
+class Program
 {
     public static async Task Main()
     {
-        await MakeTeaAsync();
+        Task task1 = Task.Run(() => CountDown());
+        Task task2 = Task.Run(() => CountUp());
+
+        await Task.WhenAll(task1, task2); // Wait for both tasks to complete
     }
 
-    public static async Task MakeTeaAsync()
+    public static void CountDown()
     {
-        Task<string> boilingWater = BoilWaterAsync(); // This is now a task
-
-        Console.WriteLine("Taking the cups out.");
-        Console.WriteLine("Putting teabags into the cups.");
-
-        string water = await boilingWater; // Thread awaits the boilingWater task to be done to get the return value.
-
-        Console.WriteLine($"Pouring {water} in cups.");
+        for (int i = 10; i >= 0; i--)
+            Console.WriteLine($"Counting Down: {i}");
     }
 
-    public static async Task<string> BoilWaterAsync()
+    public static void CountUp()
     {
-        Console.WriteLine("Started the kettle.");
-        Console.WriteLine("Waiting for the kettle.");
-        await Task.Delay(2000); // Thread waits till this is done in order to resume
-        Console.WriteLine("The kettle finished boiling.");
-
-        return "hot water";
+        for (int i = 0; i <= 10; i++)
+            Console.WriteLine($"Counting Up: {i}");
     }
 }
 ```
-
-https://www.javatpoint.com/c-sharp-multithreading
-
-https://www.javatpoint.com/c-sharp-thread-synchronization
-
-https://www.tutorialspoint.com/csharp/csharp_multithreading.htm
-
-https://www.geeksforgeeks.org/c-sharp-multithreading/
-
-https://www.youtube.com/watch?v=il9gl8MH17s
+> [!NOTE]
+> Note however that when you're using Tasks, mixing thread-objects within task-objects like: `Thread.Sleep(500);` could cause several issues.

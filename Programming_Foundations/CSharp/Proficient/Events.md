@@ -1,7 +1,7 @@
 # Events
-An event is a **notification sent by an object to signal the occurrence of an action**.
+An event is a `notification sent by an object to signal the occurrence of an action`.
 
-In C#, an **event is an encapsulated delegate**. It is dependent on the delegate. The **delegate defines the signature for the event handler method of the subscriber class**.
+In C#, an event is an `encapsulated delegate`. It is dependent on the delegate. The delegate defines the signature for the event handler method of the subscriber class.
 
 ## Observer design-pattern
 - The class who raises events is called Publisher.
@@ -10,7 +10,7 @@ In C#, an **event is an encapsulated delegate**. It is dependent on the delegate
 > [!NOTE]
 > There can be multiple subscribers of a single event. Typically, a publisher raises an event when some action occurred. The subscribers, who are interested in getting a notification when an action occurred, should register with an event and handle it.
 
-![Observer pattern](observer_pattern.png)
+![Observer pattern](/Programming_Foundations/CSharp/Images/Observer_Pattern.png)
 
 ## Declare an event
 An event can be declared in two steps:
