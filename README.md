@@ -3,7 +3,7 @@
 **prerequisites:** None
 
 <details>
-<summary> Novice: The programming fundamentals </summary>
+<summary> Novice: Fundamental programming concepts </summary>
 
 1. [Entry-point, variables, data types & operators](/Programming_Foundations/CSharp/Novice/Basics.md)
 2. [Control flow](/Programming_Foundations/CSharp/Novice/Control_Flow.md)
@@ -17,7 +17,7 @@
 </details>
 
 <details>
-<summary> Intermediate: More OOP & Functional concepts </summary>
+<summary> Intermediate: Technical language concepts </summary>
 
 1. [Operator overloading](/Programming_Foundations/CSharp/Intermediate/Operator_Overloading.md)
 2. [Nullable value types](/Programming_Foundations/CSharp/Intermediate/Nullable_Types.md)
@@ -36,7 +36,7 @@
 </details>
 
 <details>
-<summary> Proficient: Advanced Concepts & Performance Optimization </summary>
+<summary> Proficient: Advanced language concepts </summary>
 
 1. [LINQ](/Programming_Foundations/CSharp/Proficient/LINQ.md)
 2. [IDisposable objects](/Programming_Foundations/CSharp/Proficient/IDisposable.md)
@@ -48,13 +48,11 @@
 </details>
 
 <details>
-<summary> Expert: Design, architecture and lower-level concepts </summary>
+<summary> Expert: Design, architecture and system concepts </summary>
 
-1. [Dependency injection]()
-2. [Pattern matching]()
-3. [Unsafe Code & Pointers ]()
-4.  [Class Relations: Association and Composition](https://www.tutorialsteacher.com/csharp/association-and-composition)
-5.  [SOLID Principles](https://www.tutorialsteacher.com/csharp/solid-principles)
-6.  [Design Patterns](https://www.tutorialsteacher.com/csharp/design-patterns)
+1. [Dependency injection & WPF Dependency Properties](/Programming_Foundations/CSharp/Expert/Dependency_Injection.md)
+2. [Unsafe Code / Direct Memory Access](/Programming_Foundations/CSharp/Expert/Unsafe.md)
+3. [Pattern matching](/Programming_Foundations/CSharp/Expert/Pattern_matching.md)
+4. [Code Architecture & Design](/Programming_Foundations/CSharp/Expert/Code_Architecture.md)
 
 </details>
