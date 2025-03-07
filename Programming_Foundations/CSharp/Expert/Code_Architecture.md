@@ -1,6 +1,9 @@
 
 - [Software architecture \& design](#software-architecture--design)
   - [Class relationships](#class-relationships)
+    - [Association](#association)
+    - [Composition](#composition)
+    - [Aggregation](#aggregation)
   - [The SOLID principles](#the-solid-principles)
     - [Single Responsibility Principle (SRP)](#single-responsibility-principle-srp)
     - [Open/Closed Principle (OCP)](#openclosed-principle-ocp)
@@ -31,7 +34,7 @@
 ## Class relationships
 In object-oriented programming, classes can interact with each other in different ways. The primary relationships between classes are `Association`, `Composition`, and `Aggregation`. Understanding these relationships helps design cleaner, more maintainable code.
 
-**Association:**
+### Association
 Association is a "uses a" relationship, where one `class uses another` class to perform a task. The classes involved in an association can exist independently. In association, one class might use another class’s methods or behaviors, but neither class owns the other.
 
 Key Points:
@@ -55,7 +58,7 @@ public class StudentRepository
 }
 ```
 
-**Composition:**
+### Composition
 Composition is a "has a" relationship, where one `class contains a reference to another` class. In this relationship, the containing class (parent) owns the contained class (child). If the parent class is deleted, the child class will also be deleted.
 
 Key Points:
@@ -79,7 +82,7 @@ public class Student
 ```
 Here, the Student class owns the Address class. If the Student object is deleted, the `Address object will also be deleted`, indicating a composite relationship.
 
-**Aggregation:**
+### Aggregation
 Aggregation is a special type of composition, but in this relationship, the `child class can exist independently of the parent class`. The parent class holds a reference to the child class, but the child can live without the parent.
 
 Key Points:
