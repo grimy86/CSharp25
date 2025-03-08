@@ -107,3 +107,4 @@ content negotiation.
    4. Test requests in postman, status codes and all..
    5. Return the correct status codes methods from the MVC controller classes and handle bad requests
    6. ConfigureServices in the startup.cs again to accept more than just JSON
+4. Returning custom objects using Models / Data Transfer Objects
