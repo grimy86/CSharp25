@@ -1,7 +1,8 @@
 # Type conversion and parsing
 Conversion is the process of going from one data type to another. This can be done in a couple of different ways:
 - `Casting`: convert compatible types (e.g., `int → double`).
-- `Conversion` methods: hanging between more diverse types, including incompatible types (e.g., `string → int`).
+- `as` conversion: `safe type conversion` between compatible reference types or nullable value types. It `attempts to cast` an object to a specified type and returns `null if the conversion fails, instead of throwing an exception like a direct cast ((Type)obj)` would.
+- Conversion `methods`: hanging between more diverse types, including incompatible types (e.g., `string → int`).
 - `Parsing`: exclusively for converting strings into numeric types (`string → int, double, etc.`).
 
 ### Casting compatible types
@@ -22,6 +23,21 @@ Conversion is the process of going from one data type to another. This can be do
     Giraffe g = new Giraffe();
     Animal a = g; // class Giragge : Animal <- base
     ```
+
+### As conversion
+```cs
+object obj = someValue;
+SomeType variable = obj as SomeType;
+
+
+object obj = 123;  // Integer
+string str = obj as string;
+
+if (str == null)
+{
+    Console.WriteLine("Casting failed!"); // Output: Casting failed!
+}
+```
 
 ### Conversion methods
 - Handles `null` values gracefully (returns 0 instead of an exception).

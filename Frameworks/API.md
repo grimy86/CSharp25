@@ -108,3 +108,43 @@ content negotiation.
    5. Return the correct status codes methods from the MVC controller classes and handle bad requests
    6. ConfigureServices in the startup.cs again to accept more than just JSON
 4. Returning custom objects using Models / Data Transfer Objects
+   1. Change the controller return types from IActionResult to something like `ActionResult<IEnumerable<AuthorDto>>`, (remember DTO = Data Transfer Object)
+   2. Instead of the manual object mapping that we did in step 3 we can use NuGet `AutoMapper.Extensions.Microsoft.DependencyInjection`
+      1. Create a objectProfile class that inherits from profile
+      2. Now, create a mapping, the finished class looks like this:
+
+      ```cs
+      namespace CourseLibrary.API.Profiles
+      {
+         public class AuthorsProfile : Profile
+         {
+            public AuthorsProfile()
+            {
+                  CreateMap<Entities.Author, Models.AuthorDto>()
+                     .ForMember(
+                        dest => dest.Name,
+                        opt => opt.MapFrom(src => $"{src.FirstName} {src.LastName}"))
+                     .ForMember(
+                        dest => dest.Age,
+                        opt => opt.MapFrom(src => src.DateOfBirth.GetCurrentAge()));
+            }
+         }
+      }
+      ```
+5. Error handling:
+   1. When you expect a validation fault, DON'T use exception handling. It costs quite come resources, the API user might loop this and crash the API...
+   2. Also, Internal Server Errors give away the entire stacktrace which is a security concern and the API user can't use it anyways cause it's on our server, so:
+      1. Project properties -> Debug tab -> `ASPNETCORE_ENVIRONMENT:Development`, change this to `ASPNETCORE_ENVIRONMENT:Production`.
+      2. Navigate to `Startup.cs.Configure()` and add:
+
+      ```cs
+      app.UseExceptionHandler(appBuilder =>
+      {
+         appBuilder.Run(async context =>
+         {
+            context.Response.StatusCode = 500;
+            await context.Response.WriteAsync("Een onverwachte fout heeft zich voorgedaan. Probeer het later opnieuw.");
+         });
+      });
+      ```
+6. Filtering and searching, usually used when you know what items are inside of a collection
